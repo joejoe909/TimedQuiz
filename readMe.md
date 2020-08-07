@@ -1,4 +1,4 @@
-## This is the start of the Quiz Template Javascript program.
+## This is the start of the Quiz Template Javascript webpage.
 
 The Quiz template should begin with a Intro page that gives an intro to the test.
 
