@@ -25,15 +25,47 @@
     //divAlert.textContent =  "Test";
     //document.body.append(divAlert);
 
-    var div = document.createElement('div');
-    div.className = 'alert alert-primary';
-    var label = document.createElement('label');
-    label.className = 'col control-label';
-    label.innerHTML = 'this can be used to show the correct  answer';
-    var div1 = document.createElement('div');
-    div1.className = 'col-sm-10';
+    // var divQuestion = document.createElement('div');
+    // divQuestion.className = 'alert alert-primary';
+    //var label = document.createElement('label');
+    // label.className = 'col control-label';
+    // label.innerHTML = 'this can be used to show the correct  answer';
+    // divQuestion.appendChild(label);
+    // document.body.appendChild(divQuestion);
 
+     class question {
+         constructor(text){
+            var divQuestion = document.createElement('div'); 
+            divQuestion.className = 'alert alert-primary';
+            var q = document.createElement('label');
+             q.className = 'col control-label';
+             q.innerHTML = text;
+             divQuestion.appendChild(q);
+             document.body.appendChild(divQuestion);  
+         }        
+      
+    }
 
-    div.appendChild(label);
-    div.appendChild(div1);
-    document.body.appendChild(div);
+    class corAnswer {
+        constructor(text) {
+            var divQuestion = document.createElement('div');
+            divQuestion.className = 'alert alert-success';
+            var q = document.createElement('label');
+            q.className = 'col control-label';
+            q.innerHTML = text;
+            divQuestion.appendChild(q);
+            document.body.appendChild(divQuestion);
+        }
+
+    }
+
+    class correctAnswr{
+        constructor(){
+            const correct = new question("This can be used to show the correct  answer");
+            const cor = new corAnswer("this is the correct answer");
+        }
+
+    }
+
+    var corr = new correctAnswr;
+    document.body.appendChild(corr);
