@@ -14,11 +14,11 @@ document.getElementsByTagName('head')[0].appendChild(qaObject);
 
 //
 var qaHolder = {
-    numQuestions: 100,
-    holder: [numQuestions],
+    holder: [],                                             //array that holds qaObj
+    currentQuestion : 0,
 
     createQuestions: function(){
-        for(i =0; i <= numQuestions; i++)
+        for(i =0; i <= this.holder.length; i++)
         {
             //create the number of questions....
             //thus the number of qaObjects that will be held in the array.
@@ -28,23 +28,21 @@ var qaHolder = {
 
     addQAholder: function(qaHolderobj){
        holder += [qaHolderobj]  
-    }
+    },
+
+    outputQ: function(currentQuestion){
+        //code to output the question number
+        //code to output to #questiondDsp
+        //code to randomly output to id 1-4
+
+    },
 
 
-
-    //function to add a qaObject to an array
     
 }
 
-//testing the creation of an object
-var qHolder = qaHolder;
-var test = qaObject;
-test.question = "What year was JFK born?";
-test.correctAnswr = "May 29,1917";
-test.incorrect1 = "Sep 09 1911";
-test.incorrect2 = "Jun 06, 1966";
-test.incorrect3 = "Nov 22,1963";
-qHolder.addQAholder(test);
+
+
 
 
 
