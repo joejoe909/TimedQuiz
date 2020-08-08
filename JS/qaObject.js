@@ -9,8 +9,6 @@
 // - function to determine right / wrong answer.which will then produce an object array of
 // qaHolder data object
 
-
-
 var qaObject = {
     question: "Please enter a question here.",
     correctAnswr: "The Correct answer stored here.",
@@ -26,5 +24,5 @@ var qaObject = {
 
     getAnswer: function(){
         //logic to get answer.
-    }
+    },
 }
