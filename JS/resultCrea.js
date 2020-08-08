@@ -33,39 +33,103 @@
     // divQuestion.appendChild(label);
     // document.body.appendChild(divQuestion);
 
-     class question {
-         constructor(text){
-            var divQuestion = document.createElement('div'); 
-            divQuestion.className = 'alert alert-primary';
-            var q = document.createElement('label');
-             q.className = 'col control-label';
-             q.innerHTML = text;
-             divQuestion.appendChild(q);
-             document.body.appendChild(divQuestion);  
-         }        
-      
-    }
-
-    class corAnswer {
-        constructor(text) {
-            var divQuestion = document.createElement('div');
-            divQuestion.className = 'alert alert-success';
-            var q = document.createElement('label');
-            q.className = 'col control-label';
-            q.innerHTML = text;
-            divQuestion.appendChild(q);
-            document.body.appendChild(divQuestion);
-        }
-
-    }
+    //card created when user answer answers correctly.
 
     class correctAnswr{
-        constructor(){
-            const correct = new question("This can be used to show the correct  answer");
-            const cor = new corAnswer("this is the correct answer");
+        constructor(setQuestion, giveUserAnswr){
+
+            class question {
+                constructor(text) {
+                    var Question = document.createElement('div');
+                    Question.className = 'alert alert-primary';
+                    var q = document.createElement('label');
+                    q.className = 'col control-label';
+                    q.innerHTML = text;
+                    Question.appendChild(q);
+                    document.body.appendChild(Question);
+                }
+
+            }
+            
+            class corAnswer {
+                constructor(text) {
+                    var answrCor = document.createElement('div');
+                    answrCor.className = 'alert alert-success';
+                    var q = document.createElement('label');
+                    q.className = 'col control-label';
+                    q.innerHTML = text;
+                    answrCor.appendChild(q);
+                    document.body.appendChild(answrCor);
+                }
+
+            }
+            
+            const correct = new question(setQuestion);
+           const cor = new corAnswer(giveUserAnswr);
         }
 
     }
 
-    var corr = new correctAnswr;
+    //card created when users answers incorrectly.
+     class incorrectAnswr{
+        constructor(setQuestion, UserAnswr, CorrectAnswr){
+            class question {
+                constructor(text) {
+                    var divQuestion = document.createElement('div');
+                    divQuestion.className = 'alert alert-primary';
+                    var q = document.createElement('label');
+                    q.className = 'col control-label';
+                    q.innerHTML = text;
+                    divQuestion.appendChild(q);
+                    document.body.appendChild(divQuestion);
+                }
+
+            }
+
+            class giveUserAnswr {
+                constructor(text) {
+                    var userAnswr = document.createElement('div');
+                    userAnswr.className = 'alert alert-danger';
+                    var q = document.createElement('label');
+                    q.className = 'col control-label';
+                    q.innerHTML = text;
+                    userAnswr.appendChild(q);
+                    document.body.appendChild(userAnswr);
+                }
+
+            }
+
+            class giveCorrectAnswer {
+                constructor(text) {
+                    var answrCor = document.createElement('div');
+                    answrCor.className = 'alert alert-warning';
+                    var q = document.createElement('label');
+                    q.className = 'col control-label';
+                    q.innerHTML = text;
+                    answrCor.appendChild(q);
+                    document.body.appendChild(answrCor);
+                }
+
+            }
+
+            const correct = new question(setQuestion);
+            const  userAnswr = new giveUserAnswr(UserAnswr);
+            const corAnswer = new giveCorrectAnswer(CorrectAnswr);
+
+        }
+    }
+
+
+   
+    const corr = new correctAnswr("We are dispalying the question", "We are displaying the answer the user selected correctly");
+    const incor = new incorrectAnswr("We are displaying the question", "We are displaying the users incorrect answer", "We are showing the correct answer");
+
+    
     document.body.appendChild(corr);
+    document.body.appendChild(incor);
+
+
+
+
+
+ 
