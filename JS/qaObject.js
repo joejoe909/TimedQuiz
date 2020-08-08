@@ -9,7 +9,7 @@
 // - function to determine right / wrong answer.which will then produce an object array of
 // qaHolder data object
 
-var qaObject = {
+    var qaObject = {
     question: "Please enter a question here.",
     correctAnswr: "The Correct answer stored here.",
     incorrect1: "An incorrect answer.",
