@@ -8,34 +8,27 @@
     <title>Test Introduction</title>
 </head>
 <body>
-<script> /JS/qaHolder.js</script>
-
     <div class="container mt-4">
-
     <div class="alert alert-primary" role="alert">
         <h4 class="alert-heading">Welcome to the test.</h4>
-        <p class="mb-0">You will be asked a seiries of questions, we hope you can get as many as you can correct. Good Luck.</p>
+        <p class="mb-0">You will be asked a series of questions, we hope you can get as many as you can correct. Good Luck.</p>
     </div>
 
-    <div class="alert alert-danger" role="alert">
-        Time:00:00:00
-    </div>
-    
     <div class="alert alert-primary" role="alert">
         Please enter you name.
     </div>
 
     <form>
         <div class="form-group">
-            <label for="exampleInputName">Enter Your Name.</label>
-            <input type="name" class="form-control" id="exampleInputName" aria-describedby="emailHelp">
-   
+            <label for="InputName" id = "name">Enter Your Name.</label>
+        <input type="text" class="form-control" id="nameID" placeholder="name">
         </div>
   
-        <button type="button" class="btn btn-primary">Begin Test.</button>
+        <button type="button" class="btn btn-primary" id = "beginTest">Begin Test.</button>
     
     </div>
     
+    <script src= ./JS/testHandler.js></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
