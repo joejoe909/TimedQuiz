@@ -56,9 +56,9 @@ divRw.className = 'row';
 var divRw = document.createElement('div');
 divRw.className = 'row';
 var divCol1 = document.createElement('div');
-divCol1.className = 'col-2';
+divCol1.className = 'col-1';
 var divCol2 = document.createElement('div');
-divCol2.className = 'col-10 mt-2' ;
+divCol2.className = 'col-8 mt-2' ;
 var chLbl = document.createElement('label');
 chLbl.className = 'col control-label';
 chLbl.innerHTML = 'this can be used to show the users choice';
@@ -122,26 +122,29 @@ setDisplay();
 
 btn1.addEventListener("click", function (event) {
     event.preventDefault();
-   // var setChoiceText = this.querySelector(".btn1");
-    chLbl.innerHTML =  "btn1 text"; //this.querySelector(setChoice.getItem)
+    var setChoiceText = document.getElementById("bt1").value;
+    chLbl.innerHTML = setChoiceText; 
     setDisplay();
 });
 
 btn2.addEventListener("click", function (event) {
     event.preventDefault();
-    chLbl.innerHTML = "btn2 text";
+    var setChoiceText = document.getElementById("bt2").value;
+    chLbl.innerHTML = setChoiceText;
     setDisplay();
 });
 
 btn3.addEventListener("click", function (event) {
     event.preventDefault();
-    chLbl.innerHTML = "btn3 text";
+    var setChoiceText = document.getElementById("bt3").value;
+    chLbl.innerHTML = setChoiceText;
     setDisplay();
 });
 
 btn4.addEventListener("click", function (event) {
     event.preventDefault();
-    chLbl.innerHTML = "btn4 text";
+    var setChoiceText = document.getElementById("bt4").value;
+    chLbl.innerHTML = setChoiceText;
     setDisplay();
 });
 
@@ -157,7 +160,11 @@ function setDisplay()
     currentQ = qSet.qnaSet[currentQNA];
     qlabel.innerHTML = currentQ[0];
     btn1.textContent = currentQ[1];
+    btn1.value = currentQ[1];
     btn2.textContent = currentQ[2];
+    btn2.value = currentQ[2];
     btn3.textContent = currentQ[3];
+    btn3.value = currentQ[3];
     btn4.textContent = currentQ[4];
+    btn4.value = currentQ[4];
 }
