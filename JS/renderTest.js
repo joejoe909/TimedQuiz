@@ -46,13 +46,28 @@ divA4.appendChild(btn4);
 
 ///add button to go onto next question
 var divA5 = document.createElement('div');
-divA5.className = 'alert alert-danger';
+divA5.className = 'alert alert-warning';
 var btn5 = document.createElement('button');
-btn5.className = 'btn btn-danger';
+btn5.className = 'btn btn-warning';
 btn5.textContent = "Answer";
 btn5.setAttribute("id", "AnswerID");
-var answerEL = document.querySelector("#Answer");
-divA5.appendChild(btn5);
+var divRw = document.createElement('div');
+divRw.className = 'row';
+var divRw = document.createElement('div');
+divRw.className = 'row';
+var divCol1 = document.createElement('div');
+divCol1.className = 'col-2';
+var divCol2 = document.createElement('div');
+divCol2.className = 'col-10 mt-2' ;
+var chLbl = document.createElement('label');
+chLbl.className = 'col control-label';
+chLbl.innerHTML = 'this can be used to show the users choice';
+divCol1.appendChild(btn5);
+divCol2.appendChild(chLbl);
+divRw.appendChild(divCol1);
+divRw.appendChild(divCol2);
+divA5.appendChild(divRw);
+
 
 
 var cont = document.createElement('div');
@@ -104,6 +119,32 @@ var currentQ = qSet.qnaSet[currentQNA];
 setDisplay();  
 
 //Event Listener for btns.
+
+btn1.addEventListener("click", function (event) {
+    event.preventDefault();
+   // var setChoiceText = this.querySelector(".btn1");
+    chLbl.innerHTML =  "btn1 text"; //this.querySelector(setChoice.getItem)
+    setDisplay();
+});
+
+btn2.addEventListener("click", function (event) {
+    event.preventDefault();
+    chLbl.innerHTML = "btn2 text";
+    setDisplay();
+});
+
+btn3.addEventListener("click", function (event) {
+    event.preventDefault();
+    chLbl.innerHTML = "btn3 text";
+    setDisplay();
+});
+
+btn4.addEventListener("click", function (event) {
+    event.preventDefault();
+    chLbl.innerHTML = "btn4 text";
+    setDisplay();
+});
+
 btn5.addEventListener("click", function (event) {
     event.preventDefault();
     console.log("are we getting here?")
