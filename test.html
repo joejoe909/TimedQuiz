@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Test Template</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-        <div id="nameID">User Name</div>
-        <div class="alert alert-danger" role="alert" id = "timeID"> Time: 00:00:00</div>
+    <nav class="navbar navbar-light border" style="background-color: #e3f2fd;">
+        <div class="col-md-auto">
+            <h5 id="scoreID">Score:</h5>
+        </div>
+        <div class="col col-lg-2">
+            <div class="alert alert-danger col-12 align-end mt-2" role="alert" id="timeID"> Time: 00:00:00 </div>
+        </div>
     </nav>
 
-    <script src = "./JS/renderTest.js"></script>
-    
+    <script src="./JS/renderTest.js"></script>
+
     <!--Bootstrap dependencies-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -26,4 +32,5 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 </body>
+
 </html>

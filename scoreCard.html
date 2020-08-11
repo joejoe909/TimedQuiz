@@ -6,23 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>Test Introduction</title>
+    <title>Results/Score</title>
 </head>
 
 <body>
     <div class="container mt-4">
         <div class="alert alert-primary" role="alert">
-            <h4 class="alert-heading">Welcome to the test.</h4>
-            <p class="mb-0">You will be asked a series of questions, we hope you do well. Good Luck.</p>
+            <h4 class="alert-heading">Test finished.</h4>
+            <p class="mb-0" id="scoreID">Your test is complete, your score is: </p>
+        </div>
+
+        <div class="alert alert-primary" role="alert">
+            Please enter you name to be added to the score board. You may also retake the test.
+        </div>
+
+        <form>
+            <label for="InputName" id="name">Enter Your Name.</label>
+            <input type="text" class="form-control" id="nameID" placeholder="name">
+            <div class="row">
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-primary mt-4" id="EnterName">Enter Your Name.</button>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-primary mt-4" id="beginTest">Run test again.</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="alert alert-warning mt-4" id="scoreboard">
+            <p>Top Scores!</p>
+            
         </div>
 
         <div>
 
-            <button type="button" class="btn btn-primary" id="beginTest">Begin Test.</button>
-        </div>    
+        </div>
+    </div>
     </div>
 
-    <script src=./JS/testHandler.js></script>
+    <script src=./JS/score.js></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
