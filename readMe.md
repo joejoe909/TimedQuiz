@@ -1,5 +1,7 @@
 # TimedQuiz Template by Joe Farrish.
 
+You may try it out @ https://joejoe909.github.io/TimedQuiz/
+
 Hello and welcome to my Quiz Template repo. The concept of this is that you have four display brackets and code that will randomly place the correct answer and 3 wrong answers anywhere in these four display slots.
 
 
