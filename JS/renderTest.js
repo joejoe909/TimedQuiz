@@ -119,7 +119,7 @@ btn4.addEventListener("click", function (event) {
     // setDisplay();
 });
 
-btn5.addEventListener("click", function (event) {
+btn5.addEventListener("click", function (event) {  //The Answer button.
     console.log(selectedChoice);
     if(!(selectedChoice === 0))
     {
@@ -133,6 +133,7 @@ btn5.addEventListener("click", function (event) {
         } else {
             iter++;
             setDisplay();
+            selectedChoice = 0;
         }
     }else{
           chLbl.textContent = "Please choose a answer to move on!";
